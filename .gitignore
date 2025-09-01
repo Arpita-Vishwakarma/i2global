@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Django database
+db.sqlite3
+
+# Django migration folders
+*/migrations/
+!*/migrations/__init__.py
+
+# Environment files
+.env
+venv/
