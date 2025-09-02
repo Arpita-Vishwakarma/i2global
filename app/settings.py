@@ -82,6 +82,11 @@ TEMPLATES = [
     },
 ]
 
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+}
 WSGI_APPLICATION = 'app.wsgi.application'
 
 AUTH_USER_MODEL = 'users.User'

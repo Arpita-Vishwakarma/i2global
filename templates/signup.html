@@ -1,21 +1,29 @@
 {% extends "base.html" %}
-{% block title %}Sign Up — Notes{% endblock %}
+{% block title %}Sign Up{% endblock %}
 {% block content %}
-<section class="card card-md">
-  <h1>Create Account</h1>
-  <form id="signup-form" class="form-grid">
-    <label>Name
-      <input type="text" name="name" placeholder="Your name" required>
-    </label>
-    <label>Email
-      <input type="email" name="email" placeholder="you@example.com" required>
-    </label>
-    <label>Password
-      <input type="password" name="password" required>
-    </label>
-    <button type="submit" class="btn btn-primary">Sign Up</button>
-    <p class="muted">Already have an account? <a href="/signin/">Sign in</a></p>
-    <p id="signup-error" class="error"></p>
-  </form>
-</section>
+<div class="row justify-content-center">
+  <div class="col-md-6">
+    <h2 class="mb-4">Sign Up</h2>
+    <form method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input type="text" name="username" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" name="password1" class="form-control" required>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Confirm Password</label>
+        <input type="password" name="password2" class="form-control" required>
+      </div>
+      <button type="submit" class="btn btn-success">Create Account</button>
+    </form>
+  </div>
+</div>
 {% endblock %}

@@ -1,12 +1,27 @@
-{% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Notes App</title>
-    <link rel="stylesheet" href="{% static 'styles.css' %}">
-</head>
-<body>
-    <h1>Welcome to Notes App</h1>
-    <p>This is the frontend (Django template).</p>
-</body>
-</html>
+{% extends "base.html" %}
+{% block title %}Home - Notes App{% endblock %}
+{% block content %}
+<div class="text-center py-5">
+  <h1 class="display-4 fw-bold">Do you need a <span class="text-primary">Web Design?</span></h1>
+  <p class="lead">Check out our options and features.</p>
+  <a href="{% url 'signup' %}" class="btn btn-primary btn-lg">Get Started Now!</a>
+</div>
+<hr>
+<div class="row text-center mt-5">
+  <div class="col-md-4">
+    <i class="fa fa-lightbulb fa-3x text-primary"></i>
+    <h3 class="mt-3">Easy Notes</h3>
+    <p>Create and manage your notes easily.</p>
+  </div>
+  <div class="col-md-4">
+    <i class="fa fa-lock fa-3x text-primary"></i>
+    <h3 class="mt-3">Secure</h3>
+    <p>JWT-based authentication keeps your data safe.</p>
+  </div>
+  <div class="col-md-4">
+    <i class="fa fa-mobile fa-3x text-primary"></i>
+    <h3 class="mt-3">Responsive</h3>
+    <p>Fully responsive design for mobile and desktop.</p>
+  </div>
+</div>
+{% endblock %}
