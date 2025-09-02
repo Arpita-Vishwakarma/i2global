@@ -2,6 +2,57 @@
 
 A full-stack **Notes Taking Application** with user authentication and complete CRUD operations for notes, featuring a handcrafted UI. This project is designed to run locally using Docker and provides a seamless experience for managing personal notes securely.
 
+### Prerequisites
+- **Docker** and **Docker Compose** (if running with containers).
+- **Python 3.10+** and **pip** (if running locally without Docker).
+- **Node.js** (only if you’re working on the frontend separately).
+
+---
+
+## 🔧 Setup Instructions
+
+#### 1. Clone the Repository
+```bash
+git clone <repository-url>
+cd i2global
+```
+#### 2. Create a virtual environment
+```bash
+python -m venv venv
+```
+
+#### 3. Activate Virtual Environment
+Activate the virtual environment depending on your operating system:
+```bash
+# For Linux or macOS:
+source venv/bin/activate
+
+# For Windows (PowerShell):
+venv\Scripts\Activate.ps1
+
+# For Windows (Command Prompt):
+venv\Scripts\activate.bat
+```
+
+#### 4. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+#### 5. Run migrations
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```
+#### 6. Collect static files
+```bash
+python manage.py collectstatic --noinput
+```
+#### 7. Run the development server
+```bash
+python manage.py runserver
+```
+
+
 ## 🚀 Features
 
 - 🔐 **User Authentication**: Secure Sign Up, Sign In, and Profile management using JWT.
@@ -34,33 +85,13 @@ A full-stack **Notes Taking Application** with user authentication and complete 
 - **MySQL**: Database managed via Docker.
 
 ### Frontend
-- **Next.js 14 (App Router)**: React framework for server-side rendering and static site generation.
-- **State Management**: Redux or Zustand for efficient state handling.
-- **Axios**: For seamless API communication.
-- **Framer Motion**: Optional animations for enhanced UX.
-- **Tailwind CSS**: Utility-first CSS for custom UI components.
+- **HTML**: Structure and markup of web pages.
+- **CSS**: Styling and layout of the website.
+- **JavaScript**: Adding interactivity and basic frontend logic.
+
+> ⚡ Note: The frontend is currently in development. Next.js or other frameworks may be added later.
 
 ### DevOps
 - **Docker + Docker Compose**: Containerized setup for consistent development and deployment.
-
-## 📂 Project Structure
-
-# 🚀 Running Django Project
-
-## 🏃‍♂️ Getting Started
-
-### Prerequisites
-- **Docker** and **Docker Compose** (if running with containers).
-- **Python 3.10+** and **pip** (if running locally without Docker).
-- **Node.js** (only if you’re working on the frontend separately).
-
----
-
-## 🔧 Setup Instructions
-
-### 1. Clone the Repository
-```bash
-git clone <repository-url>
-cd i2global
 
 
