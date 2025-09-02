@@ -1,56 +1,46 @@
-# 📝 NotesApp – Full Stack Developer Assignment  
+# 📝 NotesApp
 
-A full-stack **Notes Taking Application** built as part of the Full Stack Developer Assessment.  
-It provides **User Authentication (Sign Up, Sign In)** and complete **CRUD operations for Notes** with a handcrafted UI.  
+A full-stack **Notes Taking Application** with user authentication and complete CRUD operations for notes, featuring a handcrafted UI. This project is designed to run locally using Docker and provides a seamless experience for managing personal notes securely.
 
----
+## 🚀 Features
 
-## 🚀 Features  
+- 🔐 **User Authentication**: Secure Sign Up, Sign In, and Profile management using JWT.
+- 📝 **Notes Management**: Create, view, edit, and delete notes with a clean, intuitive interface.
+- 🎨 **Handcrafted UI**: Custom-built components using only Tailwind CSS utilities (no prebuilt UI libraries).
+- ⚡ **REST API**: Powered by Django REST Framework for robust backend functionality.
+- 🗂️ **Organized Structure**: Clear separation of backend and frontend codebases.
+- 🐳 **Dockerized**: Runs locally with Docker and Docker Compose for easy setup.
 
-- 🔐 User Authentication with JWT (Sign Up, Sign In, Profile)  
-- 📝 Create, View, Edit, Delete Notes  
-- 🎨 Handcrafted UI (no prebuilt UI libraries, only Tailwind CSS utilities allowed)  
-- ⚡ REST API with Django REST Framework  
-- 🗂️ Proper folder structure (Backend + Frontend separated)  
-- 🐳 Runs locally inside Docker  
+## 📸 Screenshots
 
----
+### 🏠 Home Page
+![Home Page](./screenshots/Home.png)
 
-## 📸 Screenshots  
+### 🔑 Sign In Page
+![Sign In](./screenshots/Sign%20In.png)
 
-### 🏠 Home Page  
-![Home Page](./screenshots/Home.png)  
+### 🆕 Sign Up Page
+![Sign Up](./screenshots/Sign%20Up.png)
 
-### 🔑 Sign In Page  
-![Sign In](./screenshots/Sign%20In.png)  
+### 📒 Notes List Page
+![Notes List](./screenshots/Notes%20list.png)
 
-### 🆕 Sign Up Page  
-![Sign Up](./screenshots/Sign%20Up.png)  
+## 🛠️ Tech Stack
 
-### 📒 Notes List Page  
-![Notes List](./screenshots/Notes%20list.png)  
+### Backend
+- **Django 5.x**: Python web framework for rapid development.
+- **Django REST Framework**: For building scalable REST APIs.
+- **JWT Authentication**: Using `djangorestframework-simplejwt` for secure user sessions.
+- **MySQL**: Database managed via Docker.
 
----
+### Frontend
+- **Next.js 14 (App Router)**: React framework for server-side rendering and static site generation.
+- **State Management**: Redux or Zustand for efficient state handling.
+- **Axios**: For seamless API communication.
+- **Framer Motion**: Optional animations for enhanced UX.
+- **Tailwind CSS**: Utility-first CSS for custom UI components.
 
-## 🛠️ Tech Stack  
+### DevOps
+- **Docker + Docker Compose**: Containerized setup for consistent development and deployment.
 
-**Backend**  
-- Django 5.x  
-- Django REST Framework  
-- JWT Authentication (`djangorestframework-simplejwt`)  
-- MySQL (via Docker)  
-
-**Frontend**  
-- Next.js 14 (App Router)  
-- State Management: Redux / Zustand  
-- Axios for API calls  
-- Framer Motion (optional animations)  
-- Handcrafted UI components with Tailwind CSS (no prebuilt libraries)  
-
-**DevOps**  
-- Docker + Docker Compose  
-
----
-
-## 📂 Project Structure  
-
+## 📂 Project Structure
