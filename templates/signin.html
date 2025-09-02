@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Sign In — Notes{% endblock %}
+{% block content %}
+<section class="card card-md">
+  <h1>Sign In</h1>
+  <form id="signin-form" class="form-grid">
+    <label>Email
+      <input type="email" name="email" placeholder="you@example.com" required>
+    </label>
+    <label>Password
+      <input type="password" name="password" required>
+    </label>
+    <button type="submit" class="btn btn-primary">Sign In</button>
+    <p class="muted">New here? <a href="/signup/">Create an account</a></p>
+    <p id="signin-error" class="error"></p>
+  </form>
+</section>
+{% endblock %}

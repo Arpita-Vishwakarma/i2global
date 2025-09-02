@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{% if note_id %}Edit Note{% else %}New Note{% endif %} — Notes{% endblock %}
+{% block content %}
+<section class="card">
+  <h1>{% if note_id %}Edit Note{% else %}New Note{% endif %}</h1>
+  <form id="note-form" class="form-grid">
+    <label>Title
+      <input type="text" name="title" id="note-title" placeholder="Title" required>
+    </label>
+    <label>Content
+      <textarea name="content" id="note-content" rows="10" placeholder="Write your note..."></textarea>
+    </label>
+    <div class="actions">
+      <button type="submit" class="btn btn-primary">{% if note_id %}Save Changes{% else %}Create Note{% endif %}</button>
+      <a class="btn btn-ghost" href="/notes/">Cancel</a>
+      {% if note_id %}
+      <button type="button" id="delete-note" class="btn btn-danger">Delete</button>
+      {% endif %}
+    </div>
+    <p id="note-error" class="error"></p>
+  </form>
+</section>
+{% endblock %}
+{% block scripts %}
+<script>window.NOTE_ID = {{ note_id|default:'null'|safe }};</script>
+{% endblock %}

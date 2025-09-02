@@ -4,6 +4,7 @@ from django.shortcuts import render
 from rest_framework import viewsets, permissions
 from .models import Note
 from .serializers import NoteSerializer
+from django.shortcuts import render
 
 
 class NoteViewSet(viewsets.ModelViewSet):
@@ -15,3 +16,9 @@ class NoteViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
+
+
+
+
+def home(request):
+    return render(request, 'home.html')

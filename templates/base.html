@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      {% block title %}
+        Notes App
+      {% endblock %}
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Optional SEO extras -->
+    <meta name="description" content="Simple notes app with JWT auth" />
+    <meta property="og:title" content="Notes App" />
+    <meta property="og:description" content="Create, view, edit and delete notes." />
+    <link rel="stylesheet" href="{% static 'styles.css' %}" />
+    {% block head %}
+    {% endblock %}
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a href="/" class="brand">Notes</a>
+        <nav class="nav-links">
+          <a href="/notes/">Home</a>
+          <a href="/notes/new/">New Note</a>
+          <a href="/signin/" id="nav-signin">Sign in</a>
+          <button id="nav-signout" class="btn btn-ghost" style="display:none;">Sign out</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <footer class="container footer">
+      <small>© {{ now|default:'' }} Notes App</small>
+    </footer>
+
+    <script>
+      window.API_BASE = '{{ api_base }}'
+    </script>
+
+    <script src="{% static 'app.js' %}"></script>
+    {% block scripts %}
+    {% endblock %}
+  </body>
+</html>
