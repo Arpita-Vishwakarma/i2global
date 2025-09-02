@@ -44,3 +44,23 @@ A full-stack **Notes Taking Application** with user authentication and complete 
 - **Docker + Docker Compose**: Containerized setup for consistent development and deployment.
 
 ## 📂 Project Structure
+
+# 🚀 Running Django Project
+
+## 🏃‍♂️ Getting Started
+
+### Prerequisites
+- **Docker** and **Docker Compose** (if running with containers).
+- **Python 3.10+** and **pip** (if running locally without Docker).
+- **Node.js** (only if you’re working on the frontend separately).
+
+---
+
+## 🔧 Setup Instructions
+
+### 1. Clone the Repository
+```bash
+git clone <repository-url>
+cd i2global
+
+
