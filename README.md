@@ -45,7 +45,7 @@ python manage.py migrate
 ```
 #### 6. Collect static files
 ```bash
-python manage.py collectstatic --noinput
+python manage.py collectstatic
 ```
 #### 7. Run the development server
 ```bash
